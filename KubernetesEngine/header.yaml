@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: test-py-deploy
+  labels:
+    app: test-py
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-py
+  template:
+    metadata:
+      labels:
+        app: test-py
+    spec:
+      containers:
+      - name: test-py
+        image: us.gcr.io/rnacompute/py-test
+        ports:
+        - name: http-server
+          containerPort: 8080

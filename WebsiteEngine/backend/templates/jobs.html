@@ -1,0 +1,26 @@
+<section>
+    <table class="alt">
+        {% if status == pending %}
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Submit Time</th>
+                <th>Walltime</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in jobs %}
+            <tr>
+                <td>{{ item.User }}</td>
+                <td>{{ item.Name }}</td>
+                <td>{{ item.Image }}</td>
+                <td>{{ item.Submit }}</td>
+                <td>{{ item.Walltime }}</td>
+            </tr>
+        {%endfor}
+        </tbody>
+        {% endif %}
+    </table>
+</section>

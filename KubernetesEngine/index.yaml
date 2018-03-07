@@ -1,0 +1,14 @@
+indexes:
+
+- kind: jobs
+  ancestor: no
+  properties:
+  - name: Status
+  - name: TimeDate
+    direction: asc
+
+- kind: posts
+  ancestor: no
+  properties:
+  - name: TimeDate
+    direction: desc

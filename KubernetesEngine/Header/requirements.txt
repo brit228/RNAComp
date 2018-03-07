@@ -1,0 +1,4 @@
+protobuf==3.5.2
+kubernetes==5.0.0
+google-cloud-datastore==1.4.0
+PySocks==1.6.8

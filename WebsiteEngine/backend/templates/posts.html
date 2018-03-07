@@ -1,0 +1,25 @@
+{% for item in posts %}
+<section>
+    <a href="#" class="image"><img src={{ item.Image }} alt="" data-position="center center" /></a>
+    <div class="content">
+        <div class="inner">
+            <h2>{{ item.Title }}</h2>
+            <p>{{ item.TextAbbr }}</p>
+            <ul class="actions">
+                <li><a href={{ item.Link }} class="button">Learn more</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endfor %}
+{% if posts %}
+{% if main == True %}
+<div class="content">
+    <div class="inner">
+        <ul class="actions" style="padding: 2em; margin: 0">
+            <li><a href="#explain" class="button scrolly">See more posts</a></li>
+        </ul>
+    </div>
+</div>
+{% endif %}
+{% endif %}
